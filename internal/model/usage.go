@@ -43,14 +43,6 @@ type DailyReport struct {
 	ByModel    []UsageStats `json:"by_model,omitempty"`
 }
 
-// RangeReport 时间范围报告
-type RangeReport struct {
-	StartDate  string       `json:"start_date"`
-	EndDate    string       `json:"end_date"`
-	TotalStats UsageStats   `json:"total_stats"`
-	ByDate     []UsageStats `json:"by_date"`
-}
-
 // APIKeyInfo API Key 信息
 type APIKeyInfo struct {
 	ID           int64      `json:"id"`
@@ -64,14 +56,4 @@ type APIKeyInfo struct {
 	TotalCost    float64    `json:"total_cost"`
 	NameType     string     `json:"name_type"`
 	UsageLevel   string     `json:"usage_level"`
-}
-
-// QueryParams 查询参数
-type QueryParams struct {
-	Date      string `form:"date" binding:"omitempty,datetime=2006-01-02"`
-	StartDate string `form:"start_date" binding:"omitempty,datetime=2006-01-02"`
-	EndDate   string `form:"end_date" binding:"omitempty,datetime=2006-01-02"`
-	GroupBy   string `form:"group_by" binding:"omitempty,oneof=user api_key model date"`
-	Limit     int    `form:"limit" binding:"omitempty,min=1,max=1000"`
-	Offset    int    `form:"offset" binding:"omitempty,min=0"`
 }
