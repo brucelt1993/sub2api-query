@@ -1,0 +1,27 @@
+server:
+  host: "0.0.0.0"
+  port: 8086
+
+database:
+  host: "your-db-host"
+  port: 5432
+  user: "your-db-user"
+  password: "your-db-password"
+  dbname: "your-db-name"
+  sslmode: "disable"
+  max_open_conns: 25
+  max_idle_conns: 10
+
+# 查询配置
+query:
+  # 是否启用缓存
+  cache_enabled: true
+  # 缓存过期时间（秒）
+  cache_ttl: 300
+  # 默认查询天数限制
+  max_days_range: 31
+
+# 认证配置
+auth:
+  # ⚠️ 请修改为强随机字符串（至少 32 字符）
+  access_token: "your-very-long-random-secret-token-change-me"

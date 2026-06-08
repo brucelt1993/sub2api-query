@@ -1,0 +1,12 @@
+# 忽略不需要的文件
+*.exe
+*.log
+*.md
+.git
+.gitignore
+.vscode
+.idea
+*.test
+coverage.txt
+query-service
+query-service-*
